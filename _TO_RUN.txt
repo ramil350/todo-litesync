@@ -1,0 +1,13 @@
+# after extracting this app to a folder, cd to it and run:
+
+yarn
+
+cd ios && pod install && cd ..
+
+wget https://litesync.io/download/litesync.aar
+wget https://litesync.io/download/litesync-free-ios-native-libs.tar.gz
+tar zxvf litesync-free-ios-native-libs.tar.gz lib
+mv lib node_modules/react-native-litesync/platforms/ios/
+mv litesync.aar node_modules/react-native-litesync/platforms/android/
+
+react-native run-android
